@@ -1,6 +1,7 @@
 # -*- encoding: utf-8 -*-
-$LOAD_PATH.unshift File.expand_path("../lib", __FILE__)
 require "rspec/core/version"
+require "rspec/mocks/version"
+require "rspec/expectations/version"
 
 Gem::Specification.new do |s|
   s.name        = "rspec-core"
@@ -33,13 +34,17 @@ Gem::Specification.new do |s|
 **************************************************
 }
 
-  s.add_development_dependency "rspec-expectations", ">= #{RSpec::Core::Version::STRING}"
-  s.add_development_dependency "rspec-mocks",        ">= #{RSpec::Core::Version::STRING}"
-  s.add_development_dependency "cucumber",           ">= 0.5.3"
-  s.add_development_dependency "autotest",           ">= 4.2.9"
+  s.add_development_dependency "rspec-expectations", ">= #{RSpec::Expectations::Version::STRING}"
+  s.add_development_dependency "rspec-mocks",        ">= #{RSpec::Mocks::Version::STRING}"
+  s.add_development_dependency "rake",               ">= 0.8.7"
+  s.add_development_dependency "cucumber",           ">= 0.9.1"
+  s.add_development_dependency "aruba",              ">= 0.2.3"
+  s.add_development_dependency "autotest",           ">= 4.4.1"
   s.add_development_dependency "syntax",             ">= 1.0.0"
-  s.add_development_dependency "flexmock"
-  s.add_development_dependency "mocha"
-  s.add_development_dependency "rr"
+  s.add_development_dependency "flexmock",           ">= 0.8.7"
+  s.add_development_dependency "mocha",              ">= 0.9.8"
+  s.add_development_dependency "rr",                 ">= 1.0.0"
+  s.add_development_dependency "nokogiri",           ">= 1.4.3"
+  s.add_development_dependency "watchr",             ">= 0.7"
 end
 
